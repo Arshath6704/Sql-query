@@ -1,0 +1,21 @@
+SELECT 
+    first_name, 
+    last_name, 
+    CASE province_id
+        WHEN 'ON' THEN 'Ontario'
+        WHEN 'QC' THEN 'Quebec'
+        WHEN 'NS' THEN 'Nova Scotia'
+        WHEN 'NB' THEN 'New Brunswick'
+        WHEN 'MB' THEN 'Manitoba'
+        WHEN 'BC' THEN 'British Columbia'
+        WHEN 'PE' THEN 'Prince Edward Island'
+        WHEN 'SK' THEN 'Saskatchewan'
+        WHEN 'AB' THEN 'Alberta'
+        WHEN 'NL' THEN 'Newfoundland and Labrador'
+        WHEN 'NT' THEN 'Northwest Territories'
+        WHEN 'YT' THEN 'Yukon'
+        WHEN 'NU' THEN 'Nunavut'
+        ELSE 'Unknown'
+    END AS province
+FROM 
+    patients;
